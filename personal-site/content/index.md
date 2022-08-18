@@ -1,6 +1,12 @@
-+++
-title = "homepage"
-+++
+---
+title: "index"
+date: {{ .Date }}
+draft: false
+---  
 
-#hello
-this is a test
+This is a test of the hugo markdown system
+
+# Heading test
+Body text
+
+<p>Paragraph Paragraph Paragraph Paragraph Paragraph ParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraph. ParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraphParagraph. </p>
