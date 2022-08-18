@@ -1,0 +1,6 @@
+baseURL = 'http://isaacsussman.github.io/'
+languageCode = 'en-us'
+title = 'Isaac Sussman'
+theme = "hugo-coder"
+defaultContentLanguage = "en-us"
+
