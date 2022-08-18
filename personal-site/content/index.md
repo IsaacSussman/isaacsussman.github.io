@@ -1,6 +1,6 @@
 ---
 title: "index"
-date: {{ .Date }}
+date: 6/11/2022
 draft: false
 ---  
 
