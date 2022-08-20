@@ -1,0 +1,12 @@
+* {
+    text-align: center;
+}
+
+p, h1, h2, footer, header {
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+footer {
+    font-size: xx-small;
+}
