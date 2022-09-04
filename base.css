@@ -32,13 +32,6 @@ a{
         grid-area: header; 
     }
 
-    #profileMain {
-        height: 200px; width: 200px; border:2px solid black; padding:0px; border-radius: 200px;
-    }
-
-    #profileMini {
-        height: 50px; width: 50px; border:2px solid black; padding:0px; border-radius: 200px;
-    }
 
     h1 {
         font-size: 4em;
@@ -46,6 +39,22 @@ a{
 
     #title {
         margin: 0;
+        
+    }
+    #miniTitle {
+        float:left;
+        
+        margin-top:10px;
+        padding: 0%;
+    }
+
+    #profileMain {
+        height: 200px; width: 200px; border:2px solid black; padding:0px; border-radius: 200px;
+    }
+
+    #profileMini {
+        height: 50px; width: 50px; border:2px solid black; padding:0px; border-radius: 200px;
+        float: left;
     }
 
 
@@ -108,7 +117,7 @@ a{
 
     /*LAYOUT*/
         grid-template-areas: 
-        "header  header  header"
+        ".       header  ."
         ".       nav     ."
         "content content content"
         ".       footer  .";
