@@ -1,48 +1,13 @@
-
+/*GENERAL FORMATTING*/
 html {
-    text-align: center;
     background-color: blanchedalmond;
-
     font-family: 'Quicksand', sans-serif;
-
 }
 
-footer {
-    font-size: xx-small;
-    padding: 20px;
-    margin: 20px;
-    border-top: 2px solid #000000;
-    width:30%;
-    margin-left: auto; margin-right: auto;
-}
-
-h1 {
-    font-size: 4em;
-}
-
-#title {
-    margin:auto;
-}
-
-nav.menu{
-    border-bottom: 2px solid black; width: 30%; margin: auto;
-}
-
-ol.menu{
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li.navLink{
-    display: inline-block;
-}
 a{
     color: #000;
     text-decoration: underline solid #000000;
-
 }
-
-
 
 .code {
 	display: inline-block;
@@ -57,14 +22,97 @@ a{
 	
 }
 
-#profile{
-    height: 216px; width: 216px; border:2px solid black; padding:20px; border-radius: 10px;
-    margin-top: 20px;
-}
 
-p {
-	width:400px;;
-	padding: 20px;
-	margin: 0 auto;
-	
-}
+
+
+
+
+/*HEADER AREA*/
+    .header {
+        grid-area: header; 
+    }
+
+    #profileMain {
+        height: 200px; width: 200px; border:2px solid black; padding:0px; border-radius: 200px;
+    }
+
+    #profileMini {
+        height: 50px; width: 50px; border:2px solid black; padding:0px; border-radius: 200px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    #title {
+        margin: 0;
+    }
+
+
+
+
+
+/*NAVIGATION AREA*/
+    .nav{
+        grid-area: nav;border-bottom: 2px solid black ; padding-bottom: 20px;
+    }
+
+    ol.menu{
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li.navLink{
+        display: inline-block;
+    }
+
+
+
+
+
+/*CONTENT AREA*/
+    .content{
+        grid-area: content;
+        padding: 20px;
+        margin: 20px;
+    }
+
+
+
+
+
+/*FOOTER AREA*/
+    .ft {
+        grid-area: footer;
+        font-size: xx-small;
+        padding: 20px;
+        margin: 20px;
+        border-top: 2px solid #000000;
+        width:100%;
+        margin-left: auto; margin-right: auto;
+    }
+
+
+
+
+
+/*SITE CONTAINER*/
+    div.bodyContainer{
+        width: 60%;margin-left: auto; margin-right: auto;
+        display: grid;
+        gap: 10px;
+        text-align: center;
+        padding: 20px 0;
+
+
+
+    /*LAYOUT*/
+        grid-template-areas: 
+        "header  header  header"
+        ".       nav     ."
+        "content content content"
+        ".       footer  .";
+    
+    }
+
+/**/
