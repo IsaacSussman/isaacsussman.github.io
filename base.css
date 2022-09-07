@@ -81,7 +81,7 @@ a{
         margin: auto; 
     }
     
-
+    
     ol.menu{
         list-style-type: none;
         padding-left: 0;
@@ -143,4 +143,11 @@ a{
     
     }
 
-/**/
+/*OTHER*/
+
+.backBtn {
+    font-weight: bold;
+    background: none;
+    border: #0d1821 2px solid;
+    
+}
