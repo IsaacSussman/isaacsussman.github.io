@@ -1,5 +1,5 @@
 /*General Text Styling*/
-* {
+:root    {
     font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39';
 
 }
@@ -12,12 +12,34 @@ main {
     margin: 20px;
 }
 
+/*
+Info from: cssgradient.io/blog/css-gradient-text
+Adapted by: Isaac Sussman @ isaacsussman.github.io
+*/
 .gradienttext{
-    background: linear-gradient(95deg,#51ff00,#0059ff);
+    
+    background: linear-gradient(90deg,yellow,blue);
+
     background-clip: text;
     color: transparent;
-    width: fit-content;
-    fill: transparent;
+    fill: transparent;  
+}
+
+@keyframes cycling {
+    0%{background-position: 0% 50%}
+    66%{background-position: 100% 50%}
+    100%{background-position: 133% 50%}
+    
+
+}
+.gradienttext.cycling {
+    animation: 3s linear infinite normal cycling;
+    background: linear-gradient(90deg,yellow,blue,yellow);
+    background-size: 400%;
+    background-repeat:repeat-x ;
+    background-clip: text;
+    color: transparent;
+    fill: transparent;  
     
 }
 
@@ -80,22 +102,22 @@ button {
     padding-bottom: 1.3em;
     border: 3px solid black;
     border-radius: 1em;
-    transition: transform 0.25s; 
+
+    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39';
+
+    background-color: rgb(255, 72, 169);
+
+    transition: transform 0.5s; 
     transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);
-    background-color: bisque;
-    animation: slightSquish 1s ease-in-out 0.25s infinite forwards;
+    
+    animation: slightSquish 1s ease-in-out 0.5s infinite ;
 }
 
-@keyframes squish{
-    0%{transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);}
-    25%{rotate: 0deg;}
-    50%{transform: scaleX(0.9) scaleY(1.13) rotate(2deg);}
-    75%{rotate: 0deg;}
-    100%{transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);}
-}
+
 button:hover{
-    transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);
-    animation: squish 1s ease-in-out 0.25s infinite forwards;
+    
+    
+    /*animation: squish 1s ease-in-out 0.25s infinite forwards;*/
     
     
 }
