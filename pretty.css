@@ -1,0 +1,131 @@
+/*General Text Styling*/
+* {
+    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39';
+
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 20px;
+}
+
+.gradienttext{
+    background: linear-gradient(95deg,#51ff00,#0059ff);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    fill: transparent;
+    
+}
+
+
+
+/*Heading*/
+header {
+    border-bottom: black 1px dashed;
+    padding:30px;
+    padding-right: 0;
+    margin-bottom: 10px;
+    
+    
+}
+
+#title {
+    display: inline;
+    
+}
+
+    /*Navigation*/
+    nav{
+        display: inline;
+        float: right;
+        padding: 9px;
+        padding-right: 20%;
+    }
+
+    a.navlink{
+        text-decoration: underline red;
+        padding: 10px;
+    }
+
+    div.navlink {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        justify-content: space-around;
+    }
+
+    a.navlink{
+        transition: font-size 1s;
+    }
+
+    a.navlink:hover{
+        font-size: 1.1em;
+    }
+
+/*Buttons*/
+@keyframes slightSquish{
+    0%{transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);}
+    25%{rotate: 0deg;}
+    50%{transform: scaleX(0.99) scaleY(1.013) rotate(1deg);}
+    75%{rotate: 0deg;}
+    100%{transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);}
+}
+button {
+    padding: 1.8em;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    border: 3px solid black;
+    border-radius: 1em;
+    transition: transform 0.25s; 
+    transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);
+    background-color: bisque;
+    animation: slightSquish 1s ease-in-out 0.25s infinite forwards;
+}
+
+@keyframes squish{
+    0%{transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);}
+    25%{rotate: 0deg;}
+    50%{transform: scaleX(0.9) scaleY(1.13) rotate(2deg);}
+    75%{rotate: 0deg;}
+    100%{transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);}
+}
+button:hover{
+    transform: scaleX(1.1) scaleY(0.87) rotate(-2deg);
+    animation: squish 1s ease-in-out 0.25s infinite forwards;
+    
+    
+}
+
+@keyframes superSquish{
+    0%{transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);}
+    25%{rotate: 0deg;}
+    50%{transform: scaleX(0.9) scaleY(1.13) rotate(5deg);}
+    75%{rotate: 0deg;}
+    100%{transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);}
+}
+/*
+button:active{
+    transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);
+    animation: superSquish 1s ease-in-out 0.25s infinite forwards;
+    
+}*/
+
+/*Links*/
+/*To make a link not have the link emoji before it, add a linkless class to it*/
+a:not(.navlink,.linkless)::before {
+    content: '🔗';
+    
+    
+}
+
+a{
+    text-decoration: underline red;
+    color: red;
+}
+
+
+/**/

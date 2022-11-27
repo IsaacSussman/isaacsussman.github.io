@@ -1,6 +1,6 @@
 /*GENERAL FORMATTING*/
 html {
-    background-color: blanchedalmond;
+    background-color: #D0F4DE;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -9,18 +9,20 @@ a{
     text-decoration: underline solid inherit;
 }
 
-.code {
+div.code {
 	display: inline-block;
-	border: 2px solid #4d4d4d;
+	border: 2px solid #1F7A8C;
 	height: auto;
 	font-family: "Lucida Console",Courier,monospace;
     font-size: small;
-	background: #4d4d4d;
+	background: #1F7A8C;
 	border-radius: 10px;
-	color: yellow;
+	color: #FCF6BD;
 	text-align: left;
+    padding: 20px;
 	
 }
+
 
 
 
@@ -30,6 +32,7 @@ a{
 /*HEADER AREA*/
     .header {
         grid-area: header; 
+        background-color: #ACEDFF;
     }
 
     .headerMain{
@@ -74,6 +77,7 @@ a{
 
 
 
+
 /*NAVIGATION AREA*/
     .nav{
         grid-area: nav;border-bottom: 2px solid black ; padding-bottom: 20px;
@@ -101,6 +105,14 @@ a{
         grid-area: content;
         padding: 20px;
         margin: 20px;
+        text-align: center;
+    }
+
+    .block {
+        background-color: #A9DEF9   ;
+        color: #262626;
+        border: 0px;
+        border-radius: 20px;
     }
 
 
@@ -111,13 +123,12 @@ a{
     .ft {
         grid-area: footer;
         font-size: xx-small;
-        padding-bottom: 20px;
-        padding-top: 20px;
-        margin-top: 20px;
-        width:100%;
-        margin-left: auto; margin-right: auto;
-        color: whitesmoke;
-        background-color: #0d1821;
+        padding: 20px;
+        margin: 20px;
+        width: auto;
+
+        color:  #262626;
+        
     }
 
 
@@ -126,10 +137,12 @@ a{
 
 /*SITE CONTAINER*/
     div.bodyContainer{
-        width: 100%;margin-left: auto; margin-right: auto;
+        width: 80%;margin-left: auto; margin-right: auto;
         display: grid;
-        gap: 10px;
+        gap: 30px;
         text-align: center;
+        align-items: center;
+        justify-content: center;
         padding: 0;
 
 
@@ -148,6 +161,6 @@ a{
 .backBtn {
     font-weight: bold;
     background: none;
-    border: #0d1821 2px solid;
+    border: #262626 2px solid;
     
 }
