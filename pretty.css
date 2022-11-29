@@ -1,6 +1,6 @@
 /*General Text Styling*/
 :root    {
-    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39';
+    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
 
 }
 
@@ -18,7 +18,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
 */
 .gradienttext{
     
-    background: linear-gradient(90deg,yellow,blue);
+    background: linear-gradient(90deg,rgb(13, 255, 0),blue);
 
     background-clip: text;
     color: transparent;
@@ -34,7 +34,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
 }
 .gradienttext.cycling {
     animation: 3s linear infinite normal cycling;
-    background: linear-gradient(90deg,yellow,blue,yellow);
+    background: linear-gradient(90deg,rgb(13, 255, 0),blue,rgb(13, 255, 0));
     background-size: 400%;
     background-repeat:repeat-x ;
     background-clip: text;
@@ -69,7 +69,7 @@ header {
     }
 
     a.navlink{
-        text-decoration: underline red;
+        text-decoration: none;
         padding: 10px;
     }
 
@@ -77,15 +77,22 @@ header {
         display: flex;
         flex-direction: row;
         width: fit-content;
+        
         justify-content: space-around;
     }
 
     a.navlink{
-        transition: font-size 1s;
+        
+        font-weight: normal;
     }
 
     a.navlink:hover{
-        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    a.navlink:visited {
+        font-weight: lighter;
+        
     }
 
 /*Buttons*/
@@ -100,53 +107,42 @@ button {
     padding: 1.8em;
     padding-top: 1.3em;
     padding-bottom: 1.3em;
+    margin: 1em;
     border: 3px solid black;
     border-radius: 1em;
+    --background-color:rgb(255, 72, 169);
+    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
 
-    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39';
+    background-color: var(--background-color);
 
-    background-color: rgb(255, 72, 169);
-
-    transition: transform 0.5s; 
-    transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);
+    transition: transate 0.5s, box-shadow 0.5s; 
+    translate: 1em, -1em;
     
-    animation: slightSquish 1s ease-in-out 0.5s infinite ;
+    animation: slightSquish 1s ease-in-out 0.5s infinite none;
+
 }
 
 
 button:hover{
-    
-    
-    /*animation: squish 1s ease-in-out 0.25s infinite forwards;*/
-    
-    
+    box-shadow: -0.3em 0.3em 0 0 rgba(0, 0, 0, 0.4),-0.3em 0.3em 0 0 var(--background-color),-0.3em 0.3em 0 0.125em rgba(0, 0, 0, 1);
+    cursor:pointer;   
 }
 
-@keyframes superSquish{
-    0%{transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);}
-    25%{rotate: 0deg;}
-    50%{transform: scaleX(0.9) scaleY(1.13) rotate(5deg);}
-    75%{rotate: 0deg;}
-    100%{transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);}
-}
-/*
-button:active{
-    transform: scaleX(1.1) scaleY(0.87) rotate(-5deg);
-    animation: superSquish 1s ease-in-out 0.25s infinite forwards;
+button:active {
     
-}*/
+}
 
 /*Links*/
 /*To make a link not have the link emoji before it, add a linkless class to it*/
-a:not(.navlink,.linkless)::before {
+a:not(.linkless)::before {
     content: '🔗';
     
     
 }
 
 a{
-    text-decoration: underline red;
-    color: red;
+    text-decoration: none;
+    color:cornflowerblue;
 }
 
 
