@@ -21,6 +21,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
     background: linear-gradient(90deg,rgb(13, 255, 0),blue);
 
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     fill: transparent;  
 }
@@ -38,6 +39,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
     background-size: 400%;
     background-repeat:repeat-x ;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     fill: transparent;  
     
