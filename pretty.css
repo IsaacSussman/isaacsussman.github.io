@@ -53,13 +53,14 @@ header {
     padding:30px;
     padding-right: 0;
     margin-bottom: 10px;
+    position: relative;
     
     
 }
 
 #title {
     display: inline;
-    
+    font-family: 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
 }
 
     /*Navigation*/
@@ -67,35 +68,38 @@ header {
         display: inline;
         float: right;
         padding: 9px;
+        position: relative;
         margin-top: auto;
         margin-bottom: auto;
         padding-right: 20%;
+        width: 40%;
+        line-height: 100%;
+        transform: translate(0,-9px);
     }
 
     a.navlink{
         text-decoration: none;
         padding: 10px;
+        font-weight: normal;
+        width: 100%;
+        text-align: center;
+        font-weight: lighter;
     }
 
     div.navlink {
         display: flex;
         flex-direction: row;
-        width: fit-content;
-        justify-content: space-around;
+        justify-content: space-between;
+        position: relative;
     }
 
-    a.navlink{
-        
-        font-weight: normal;
-    }
 
     a.navlink:hover{
-        font-weight: bold;
+        font-weight: normal; 
     }
 
     a.navlink:visited {
-        font-weight: lighter;
-        
+
     }
 
 /*Buttons*/
