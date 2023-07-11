@@ -1,49 +1,48 @@
 /*General Text Styling*/
-:root    {
+:root {
     font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
-
+    min-height: 100%;
 }
+
+html, body { min-height: 100vh; }
+
+/*Page Structure*/
 
 body {
     margin: 0px;
+
+}
+
+body.main-page {
+    margin: 0px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15fr 85fr;
+    
 }
 
 main {
     margin: 20px;
 }
 
-/*
-Info from: cssgradient.io/blog/css-gradient-text
-Adapted by: Isaac Sussman @ isaacsussman.github.io
-*/
-.gradienttext{
-    
-    background: linear-gradient(90deg,rgb(13, 255, 0),blue);
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    fill: transparent;  
-}
-
-@keyframes cycling {
-    0%{background-position: 0% 50%}
-    66%{background-position: 100% 50%}
-    100%{background-position: 133% 50%}
-    
+main.columns {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
 
 }
-.gradienttext.cycling {
-    animation: 3s linear infinite normal cycling;
-    background: linear-gradient(90deg,rgb(13, 255, 0),blue,rgb(13, 255, 0));
-    background-size: 400%;
-    background-repeat:repeat-x ;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    fill: transparent;  
-    
+
+div.column {
+    display: flex;
+    height: 100%;
+    border: 1px black dotted;
+    border-radius: 10px ;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
 }
+
 
 
 
@@ -54,6 +53,8 @@ header {
     padding-right: 0;
     margin-bottom: 10px;
     position: relative;
+    max-height: 15%;
+
     
     
 }
@@ -110,7 +111,8 @@ header {
     75%{rotate: 0deg;}
     100%{transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);}
 }
-button {
+
+button:not(.deanimate) {
     padding: 1.8em;
     padding-top: 1.3em;
     padding-bottom: 1.3em;
@@ -130,13 +132,41 @@ button {
 }
 
 
-button:hover{
+button:hover:not(.deanimate){
     box-shadow: -0.3em 0.3em 0 0 rgba(0, 0, 0, 0.4),-0.3em 0.3em 0 0 var(--background-color),-0.3em 0.3em 0 0.125em rgba(0, 0, 0, 1);
     cursor:pointer;   
 }
 
-button:active {
-    
+button:active:not(.deanimate) {
+    box-shadow: -0.1em 0.1em 0 0 rgba(0, 0, 0, 0.4),-0.1em 0.1em 0 0 var(--background-color),-0.1em 0.1em 0 0.125em rgba(0, 0, 0, 1);
+    animation: slightSquish 3s ease-in-out 0.5s infinite none;
+}
+
+/*To remove the squish animation, siply add the deanimate class to your button*/
+
+button.deanimate {
+    padding: 1.8em;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    margin: 1em;
+    border: 3px solid black;
+    border-radius: 1em;
+    --background-color:rgb(255, 72, 169);
+    font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
+
+    background-color: var(--background-color);
+
+    transition: transate 0.5s, box-shadow 0.5s; 
+    translate: 1em, -1em;
+}
+
+button.deanimate:hover{
+    box-shadow: -0.3em 0.3em 0 0 rgba(0, 0, 0, 0.4),-0.3em 0.3em 0 0 var(--background-color),-0.3em 0.3em 0 0.125em rgba(0, 0, 0, 1);
+    cursor:pointer;   
+}
+
+button.deanimate:active {
+    box-shadow: -0.1em 0.1em 0 0 rgba(0, 0, 0, 0.4),-0.1em 0.1em 0 0 var(--background-color),-0.1em 0.1em 0 0.125em rgba(0, 0, 0, 1);
 }
 
 /*Links*/
@@ -153,4 +183,37 @@ a{
 }
 
 
-/**/
+/*
+Info from: cssgradient.io/blog/css-gradient-text
+Adapted by: Isaac Sussman @ isaacsussman.github.io
+*/
+
+/*Gradient text backgrounds*/
+.gradienttext{
+    
+    background: linear-gradient(90deg,rgb(13, 255, 0),blue);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    fill: transparent;  
+}
+
+@keyframes cycling {
+    0%{background-position: 0% 50%}
+    66%{background-position: 100% 50%}
+    100%{background-position: 133% 50%}
+    
+
+}
+.gradienttext.cycling {
+    animation: 3s linear infinite normal cycling;
+    background: linear-gradient(90deg,rgb(13, 255, 0),blue,rgb(13, 255, 0));
+    background-size: 400%;
+    background-repeat:repeat-x ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    fill: transparent;  
+    
+}
