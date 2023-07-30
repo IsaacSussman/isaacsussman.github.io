@@ -2,6 +2,14 @@
 :root {
     font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
     min-height: 100%;
+    --gunmetal: #292f36ff;
+    --celeste: #c7ffedff;
+    --silver: #bbc8caff;
+    --light-red: #ff6b6bff;
+    --giants-orange: #f05d23ff;
+    --saffron: #eec643ff;
+    --sky-magenta: #C179B9;
+    background-color: var(--celeste);
 }
 
 
@@ -18,6 +26,7 @@ body.main-page {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 15fr 85fr;
+    color:var(--gunmetal);
     
 }
 
@@ -42,17 +51,17 @@ div.column {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ADFFE5;
 }
 
 
 
-/*Heading*/
+/*Header*/
 header {
-    border-bottom: black 1px dashed;
     padding:30px;
     padding-right: 0;
     padding-bottom: 10px;
-    
+    background-color: var(--gunmetal);
     position: relative;
     
 
@@ -114,6 +123,7 @@ header {
 }
 
 button:not(.deanimate) {
+    font-weight: 700;
     padding: 1.8em;
     padding-top: 1.3em;
     padding-bottom: 1.3em;
@@ -148,6 +158,7 @@ button:active:not(.deanimate) {
 /*To remove the squish animation, siply add the deanimate class to your button*/
 
 button.deanimate {
+    font-weight: bold;
     padding: 1.8em;
     padding-top: 1.3em;
     padding-bottom: 1.3em;
@@ -194,7 +205,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
 /*Gradient text backgrounds*/
 .gradienttext{
     
-    background: linear-gradient(90deg,rgb(13, 255, 0),blue);
+    background: linear-gradient(90deg,var(--silver),var(--light-red));
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -211,7 +222,7 @@ Adapted by: Isaac Sussman @ isaacsussman.github.io
 }
 .gradienttext.cycling {
     animation: 3s linear infinite normal cycling;
-    background: linear-gradient(90deg,rgb(13, 255, 0),blue,rgb(13, 255, 0));
+    background: linear-gradient(90deg,var(--saffron),var(--light-red),var(--giants-orange),var(--light-red),var(--saffron));
     background-size: 400%;
     background-repeat:repeat-x ;
     background-clip: text;
