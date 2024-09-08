@@ -3,7 +3,7 @@
     font-family: 'Plus Jakarta Sans', 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
     min-height: 100%;
     --gunmetal: #292f36ff;
-    --celeste: #c7ffedff;
+    --celeste: #FAF9F6;
     --silver: #bbc8caff;
     --light-red: #ff6b6bff;
     --giants-orange: #f05d23ff;
@@ -37,9 +37,12 @@ main {
 main.columns {
     margin: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap:10px;
+}
 
+@media (min-width: 900px) {
+    main.columns{grid-template-columns:  1fr 1fr 1fr;}
 }
 
 div.column {
@@ -52,26 +55,37 @@ div.column {
     justify-content: center;
     align-items: center;
     background-color: #ADFFE5;
+    padding:10%;
+    text-align: center;
 }
+
+
 
 
 
 /*Header*/
 header {
     padding:30px;
-    padding-right: 0;
-    padding-bottom: 10px;
+    
     background-color: var(--gunmetal);
     position: relative;
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    vertical-align: middle;
+    text-align: center;
+}
 
-    
-    
+@media (min-width: 1000px) {
+    header {
+        grid-template-columns: 1fr 3fr;
+    }
 }
 
 #title {
     display: inline;
     font-family: 'Quicksand','Trebuchet MS', sans-serif, 'Libre Barcode 39 Text';
+    margin:0;
 }
 
     /*Navigation*/
@@ -82,16 +96,16 @@ header {
         position: relative;
         margin-top: auto;
         margin-bottom: auto;
-        padding-right: 20%;
-        width: 40%;
+        /*padding-right: 20%;*/
+        width: 100%;
         line-height: 100%;
-        transform: translate(0,-9px);
+        /*transform: translate(0,-9px);*/
     }
 
     a.navlink{
         text-decoration: none;
-        padding: 10px;
-        font-weight: normal;
+        width:100%;
+        font-weight: bolder;
         width: 100%;
         text-align: center;
         font-weight: lighter;
@@ -110,9 +124,13 @@ header {
     }
 
     a.navlink:visited {
-
+        
     }
 
+/*Footer*/
+footer {
+    text-align: center;
+}
 /*Buttons*/
 @keyframes slightSquish{
     0%{transform: scaleX(1.01) scaleY(0.987) rotate(-1deg);}
